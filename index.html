@@ -19,6 +19,13 @@
             <input type="text" id = "cityName" name = 'cityName' placeholder="City">
             <button>Find </button>
         </form>
+
+        {% if data != None %}
+              {{data.main}} : {{ data.description }}<br>
+              <img src="https://openweathermap.org/img/wn/{{data.icon}}@2x.png" alt = "Icon">
+              {{data.temperature}} <br>
+        {% endif %}
+
     </div>
     
 
