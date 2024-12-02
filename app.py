@@ -12,7 +12,7 @@ class WeatherData:
     temperature : float
 
 
-city = input("enter city: ")
+city = input("city name: ")
 
 def main(city, api_key):
     weather_data = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&APPID={api_key}").json()
@@ -24,6 +24,5 @@ def main(city, api_key):
     )
     return data
 
-print(main(city, api_key))
 
 
